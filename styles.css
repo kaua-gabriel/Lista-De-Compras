@@ -1,0 +1,241 @@
+:root {
+  --bg-dark: #0a0a0a;
+  --accent-dark: #1a3c54;
+  --highlight: #4a90a4;
+  --highlight-light: #75a9c5;
+  --text-light: #ffffff;
+  --success: #2ecc71;
+  --warning: #f1c40f;
+  --error: #e74c3c;
+  --neutral-dark: #273849;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png'),
+    linear-gradient(135deg, #0a0a0a, #1a3c54);
+  background-size: cover;
+  background-position: center;
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(14px) brightness(1.1);
+  -webkit-backdrop-filter: blur(14px) brightness(1.1);
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--highlight);
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 0 10px rgba(117, 169, 197, 0.2);
+}
+
+.input-area {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  width: 80%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-light);
+  font-family: 'Roboto', sans-serif;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--highlight);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 10px var(--highlight-light);
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(74, 144, 164, 0.25);
+  backdrop-filter: blur(8px);
+  color: var(--text-light);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 80%;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: rgba(117, 169, 197, 0.3);
+  transform: scale(1.05);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background: rgba(39, 56, 73, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin: 10px 0;
+  padding: 15px;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-light);
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.quantity {
+  font-size: 1rem;
+  margin-left: 10px;
+  color: var(--text-light);
+}
+
+button.increase-quantity,
+button.edit-item,
+button.delete-item {
+  margin-top: 10px;
+  width: 80%;
+  font-weight: 600;
+  color: var(--text-light);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+button.increase-quantity,
+button.edit-item {
+  background-color: var(--success);
+}
+
+button.increase-quantity:hover,
+button.edit-item:hover {
+  background-color: #27ae60;
+}
+
+button.delete-item {
+  background-color: var(--error);
+}
+
+button.delete-item:hover {
+  background-color: #c0392b;
+}
+
+.total {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--highlight);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  .input-area input {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  
+  button {
+    width: 90%;
+    font-size: 1rem;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  li {
+    font-size: 1rem;
+    padding: 12px;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+  }
+  
+  .quantity {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  
+  .input-area input {
+    width: 85%;
+    font-size: 0.85rem;
+  }
+  
+  button {
+    width: 85%;
+    font-size: 0.9rem;
+  }
+  
+  li {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  
+  .price {
+    font-size: 1.1rem;
+  }
+  
+  .quantity {
+    font-size: 0.9rem;
+  }
+  
+  .total p {
+    font-size: 1rem;
+  }
+}

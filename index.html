@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Supermercado</title>
+  
+  <!-- Fonte personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Lista de Supermercado</h1>
+
+    <div class="input-area">
+      <input type="text" id="item" placeholder="Item" />
+      <input type="number" id="price" placeholder="Preço" />
+      <button id="add-item">Adicionar</button>
+    </div>
+
+    <ul id="shopping-list"></ul>
+
+    <div class="total">
+      <p>Total: <span id="total-price">R$ 0,00</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
